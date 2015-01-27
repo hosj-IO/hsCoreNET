@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace hsCore
 {
@@ -25,7 +22,7 @@ namespace hsCore
             string childPathFull = Path.GetFullPath(childPath).ToUpperInvariant();
             string parentPathFull = Path.GetFullPath(parentPath).ToUpperInvariant();
 
-            if (childPathFull.StartsWith(parentPath))
+            if (childPathFull.StartsWith(parentPathFull))
                 return true;
             return false;
         }

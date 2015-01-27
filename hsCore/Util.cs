@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-
-namespace hsCore
+﻿namespace hsCore
 {
     public class Util
     {

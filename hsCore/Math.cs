@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace hsCore
 {
@@ -53,13 +49,6 @@ namespace hsCore
         /// </returns>
         public static bool IsIntegerBetween(int target, int minimum, int maximum, bool includeEquals)
         {
-            if (target == null)
-                throw new ArgumentException("Parameter " + "target" + " cannot be null");
-            if (minimum == null)
-                throw new ArgumentException("Parameter " + "minimum" + " cannot be null");
-            if (maximum == null)
-                throw new ArgumentException("Parameter " + "maximum" + " cannot be null");
-
             if (!includeEquals && target > minimum && target < maximum)
             {
                 return true;
@@ -91,7 +80,7 @@ namespace hsCore
                 Random random = new Random();
                 return random.NextDouble() * (maximum - minimum) + minimum;
             }
-            else if (minimum == maximum)
+            else if (System.Math.Abs(minimum - maximum) < 0.0000000001)
             {
                 throw new ArgumentException("Parameters are not valid: Minimum is the same as the maximum.");
             }
