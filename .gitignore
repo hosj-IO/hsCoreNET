@@ -1,0 +1,4 @@
+hsCoreTest/obj/
+hsCoreTest/bin/
+hsCore/obj/Debug/
+*.suo
