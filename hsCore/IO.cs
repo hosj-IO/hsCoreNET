@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace hsCore
 {
-    class IO
+    public class IO
     {
         /// <summary>
         /// Determines whether the suspected childPath is family of the parentPath
@@ -14,9 +14,9 @@ namespace hsCore
         /// <returns>True when child is subfolder of Parent</returns>
         public static bool IsChildOfParent(string childPath, string parentPath)
         {
-            if(string.IsNullOrWhiteSpace(childPath))
+            if (string.IsNullOrWhiteSpace(childPath))
                 throw new ArgumentException("Child path cannot be null or only be whitespaces");
-            if(string.IsNullOrWhiteSpace(parentPath))
+            if (string.IsNullOrWhiteSpace(parentPath))
                 throw new ArgumentException("Parent path cannot be null or only be whitespaces");
 
             string childPathFull = Path.GetFullPath(childPath).ToUpperInvariant();

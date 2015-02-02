@@ -2,7 +2,7 @@
 
 namespace hsCore
 {
-    class Math
+    public class Math
     {
         /// <summary>
         /// Random integer generator.
