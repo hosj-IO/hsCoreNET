@@ -43,8 +43,8 @@ namespace hsCoreTest
             int min = 1;
             int max = 2;
 
-            int actualResult = hsCore.Util.RandomIntGenerator(min, max);
-            Assert.IsTrue(hsCore.Util.IsIntegerBetween(actualResult,min,max,true));
+            int actualResult = hsCore.Math.RandomIntGenerator(min, max);
+            Assert.IsTrue(hsCore.Math.IsIntegerBetween(actualResult,min,max,true));
         }
 
         [TestMethod]
@@ -56,7 +56,7 @@ namespace hsCoreTest
             bool equalIncluded = false;
 
             bool expectedResult = true;
-            bool actualResult = hsCore.Util.IsIntegerBetween(target, min, max, equalIncluded);
+            bool actualResult = hsCore.Math.IsIntegerBetween(target, min, max, equalIncluded);
             Assert.AreEqual(expectedResult, actualResult);
 
         }
@@ -67,7 +67,7 @@ namespace hsCoreTest
             string child = "C:\\hsCore\\1\\2\\3";
             string parent = "C:\\hscore\\";
 
-            bool actualResult = hsCore.Util.IsChildOfParent(parent, child);
+            bool actualResult = hsCore.IO.IsChildOfParent(parent, child);
             Assert.AreEqual(true, actualResult);
 
         }
