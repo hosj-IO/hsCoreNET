@@ -67,7 +67,7 @@ namespace hsCoreTest
             string child = "C:\\hsCore\\1\\2\\3";
             string parent = "C:\\hscore\\";
 
-            bool actualResult = hsCore.IO.IsChildOfParent(parent, child);
+            bool actualResult = hsCore.IO.IsChildOfParent(child,parent);
             Assert.AreEqual(true, actualResult);
 
         }
