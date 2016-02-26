@@ -90,5 +90,10 @@ namespace hsCore
             }
             throw new ArgumentException("Parameters are not valid.");
         }
+
+        public static int GetDecimalCount(decimal Decimal)
+        {
+            return BitConverter.GetBytes(decimal.GetBits(Decimal)[3])[2];
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace hsCoreTest
 {
@@ -70,6 +71,27 @@ namespace hsCoreTest
             bool actualResult = hsCore.IO.IsChildOfParent(child,parent);
             Assert.AreEqual(true, actualResult);
 
+        }
+
+        [TestMethod]
+        public void IsDecimalFiveCorrect()
+        {
+            decimal five = new decimal(1.49183);
+            Assert.AreEqual(hsCore.Math.GetDecimalCount(five),5);
+        }
+
+        [TestMethod]
+        public void IsDecimalTenCorrect()
+        {
+            decimal ten = new decimal(1.4918349183);
+            Assert.AreEqual(hsCore.Math.GetDecimalCount(ten), 10);
+        }
+
+        [TestMethod]
+        public void IsDecimalNineIncorrect()
+        {
+            decimal nine = new decimal(1.491834918);
+            Assert.AreNotEqual(hsCore.Math.GetDecimalCount(nine), 10);
         }
     }
 }
